@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".Fragments.ServiceFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_wax"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tóc"
+            android:textColor="@android:color/white"
+            app:chipBackgroundColor="@android:color/holo_red_light" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_spray"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mặt"
+            android:textColor="@android:color/white"
+            app:chipBackgroundColor="@android:color/holo_green_light" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_hair_care"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hair care"
+            android:textColor="@android:color/white"
+            app:chipBackgroundColor="@android:color/holo_green_light" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_body_care"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Body care"
+            android:textColor="@android:color/white"
+            app:chipBackgroundColor="@android:color/holo_green_light" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_items"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_weight="1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/btn_loadImg"
+            android:background="@drawable/ic_image_black_24dp"
+
+
+            />
+        <EditText
+            android:layout_weight="7"
+            android:layout_width="230dp"
+            android:maxLines="1"
+            android:maxEms="3"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_cmt" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="right">
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_send_black2_24dp"/>
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_cmt"
+                android:background="@drawable/ic_send_black3_24dp"/>
+
+
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_load"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_close"
+            android:background="@drawable/ic_close_black_24dp"
+            />
+
+    </FrameLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_cmt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
